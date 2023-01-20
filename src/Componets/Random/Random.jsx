@@ -2,13 +2,12 @@ import './Random.css'
 
 const Random = ({ min, max }) => {
 
+    let num = Math.floor((Math.random() * (max - min + 1)) + min)
 
     return (
-        <>
-            {num = Math.floor((Math.random() * (max - min + 1)) + min)}
-
-        </>
-
+        <div>
+            <p>Random value between {min} and {max} = {num}</p>
+        </div>
     )
 }
 
