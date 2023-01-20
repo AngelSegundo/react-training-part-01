@@ -1,4 +1,6 @@
 import './App.css';
+import BoxColor from './Componets/BoxColor/BoxColor';
+import Greetings from './Componets/Greetings/Greetings';
 import IdCard from './Componets/IdCard/IdCard';
 import Random from './Componets/Random/Random';
 
@@ -6,7 +8,6 @@ import Random from './Componets/Random/Random';
 
 function App() {
   return (
-
     <div>
       <IdCard
         lastName='Doe'
@@ -25,15 +26,23 @@ function App() {
         //    birth={new Date('1998-05-11')}
         picture='https://randomuser.me/api/portraits/women/44.jpg'
       />
+      <hr />
+      <hr />
 
+      <Greetings lang="de">Angel</Greetings>
+      <Greetings lang="fr">Angel</Greetings>
 
       <hr />
       <hr />
+
       <Random min={1} max={6} />
       <Random min={1} max={100} />
 
       <hr />
       <hr />
+
+      <BoxColor r={255} g={0} b={0} />
+      <BoxColor r={128} g={255} b={0} />
 
     </div>
 

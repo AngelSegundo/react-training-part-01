@@ -1,14 +1,33 @@
-import './IdCard.css'
+import './Greetings.css'
 
-const IdCard = ({ lastName, firstNAme, gender, height, birth, picture }) => {
+const Greetings = (props) => {
+
+    let saludo
+
+    switch (props.lang) {
+        case 'de':
+            saludo = 'Hallo'
+            break;
+        case 'en':
+            saludo = 'Hello'
+            break;
+        case 'fr':
+            saludo = 'Bonjour'
+            break;
+        case 'es':
+            saludo = 'Holi'
+            break;
+        default:
+            saludo = 'Aloha'
+            break;
+    }
+
     return (
-        <div>
-           
-        </div>
+        <p>{saludo}, {props.children}</p>
     )
 }
 
-export default IdCard
+export default Greetings
 
 
 
